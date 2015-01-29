@@ -9,11 +9,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 
 public class MainActivity extends ActionBarActivity {
     final String TAG="MIO";
     Button miBoton;
+    Button miBotonMagia;
     Context miContexto;
 
     @Override
@@ -31,6 +33,19 @@ public class MainActivity extends ActionBarActivity {
                 startActivity(miIntent);
             }
         });
+
+        miBotonMagia=(Button)findViewById(R.id.button2);
+        miBotonMagia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TextView textView = (TextView)findViewById(R.id.textView2);
+                textView.setText("Tachán!!!");
+                textView.setTextSize(30);
+                textView.setTextColor(getResources().getColor(R.color.Rojo));
+            }
+        });
+
+
     }
 
     @Override
